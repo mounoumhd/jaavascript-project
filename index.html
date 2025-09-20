@@ -6,6 +6,9 @@
     <title>Bases de JS</title>
 </head>
 <body>
+     <h2>📅 Date et ⏰ Heure en JavaScript</h2>
+       <p id="date"></p>
+       <p id="heure"></p>
     <script>
         console.log ("hello world") 
         console.warn("attention, cette action peut avoir des conséquences imprévues")
@@ -20,8 +23,8 @@
         console.log ("mon prénom est "+ name+ "et j'ai "+ age,"ans.")
         console.log (`mon nom est ${name} et j'ai ${age} ans.`)
         var username=prompt ("veuillez saisir votre nom")
-        alert ("votre nom est: " +username)
-        // conditions
+        console.log ("votre nom est: " +username)
+        // conditions 
         const time= new Date().getHours()
         console.log(time)
         if(time<10){
@@ -33,47 +36,47 @@
         else{
             console.log("bonne soirée")
         }
-          //  Afficher la date du jour
-         let aujourdHui = new Date(); 
-         let options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+          // Fonction pour afficher la date et l'heure
+        function afficherDateHeure() {
+        const now = new Date()
 
-           // Affichage dans la console
-           console.log("Aujourd'hui nous sommes le :", aujourdHui.toLocaleDateString('fr-FR', options));
+      // Date du jour
+      const jour = now.getDate()
+      const mois = now.getMonth() + 1 // les mois commencent à 0
+      const annee = now.getFullYear()
+      document.getElementById("date").innerText = `Date du jour : ${jour}/${mois}/${annee}`
 
-         // Affichage directement sur la page HTML
-         document.body.innerHTML += `<p>Aujourd'hui nous sommes le : <strong>${aujourdHui.toLocaleDateString('fr-FR', options)}</strong></p>`;
-         // 2) Afficher l'heure (HH:MM:SS) en temps réel
-    // -------------------------------
-    function afficherHeure() {
-      let maintenant = new Date();
-      let heures = String(maintenant.getHours()).padStart(2, '0');
-      let minutes = String(maintenant.getMinutes()).padStart(2, '0');
-      let secondes = String(maintenant.getSeconds()).padStart(2, '0');
+      // Heure actuelle
+      const heures = String(now.getHours()).padStart(2, "0")
+      const minutes = String(now.getMinutes()).padStart(2, "0")
+      const secondes = String(now.getSeconds()).padStart(2, "0")
+      document.getElementById("heure").innerText = `Heure actuelle : ${heures}:${minutes}:${secondes}`
+     }
 
-      document.getElementById("time").innerHTML = "⏰ Heure actuelle : <strong>" + heures + ":" + minutes + ":" + secondes + "</strong>";
-    }
+      // Mise à jour immédiate
+       afficherDateHeure()
 
-    // Mise à jour toutes les secondes
-    setInterval(afficherHeure, 1000);
+       // Mise à jour automatique chaque seconde
+       setInterval(afficherDateHeure, 1000)
+      // Déclaration de deux notes
+       let noteModule1 = 12
+       let noteModule2 = 8
 
-    // -------------------------------
-    // 3) Calculer une moyenne et afficher un message
-    // -------------------------------
-    let note1 = 14;  // Exemple : module 1
-    let note2 = 8;   // Exemple : module 2
-    let moyenne = (note1 + note2) / 2;
+       // Calcul de la moyenne
+       let moyenne = (noteModule1 + noteModule2) / 2
 
-    let message = "";
-    if (moyenne > 10) {
-      message = "🎉 Bravo, vous avez réussis ! (Moyenne : " + moyenne + ")";
-    } else if (moyenne === 10) {
-      message = "🙂 Passable (Moyenne : " + moyenne + ")";
-    } else {
-      message = "❌ Ajourné (Moyenne : " + moyenne + ")";
-    }
+      console.log(`Note Module 1 : ${noteModule1}`)
+      console.log(`Note Module 2 : ${noteModule2}`)
+      console.log(`Moyenne = ${moyenne}`)
 
-    document.getElementById("resultat").innerHTML = message;
-
+      // Vérification de la moyenne
+      if (moyenne > 10) {
+      console.log("✅ Bravo, vous avez réussis")
+      } else if (moyenne === 10) {
+     console.log("⚖️ Passable")
+     } else {
+     console.log("❌ Ajourné")
+    }  
     </script>
 </body>
 </html>
