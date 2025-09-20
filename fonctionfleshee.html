@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>fonction fleshee</title>
+</head>
+<body>
+    <script>
+        function addition(a,b){
+            return a+b
+        }
+        console.log(addition(3,2))
+
+        const additionArrow=(a,b)=> a+b
+        console.log(additionArrow(2,3))
+
+        function multiplication(c,d){
+            const resultat = c*d 
+            return resultat 
+
+        }
+        console.log(MultiplicationArrow(5,6))
+
+        function Estpair (nbr){
+            if (nbr%2===0) {
+                return true
+                
+            } else {
+                return false
+            }
+            console.log(Estpair(5))
+            const EstpairArrow= (nbr) =>nbr%2 ===0? true:false 
+            console.log (Estpair(5))
+        }
+
+        function sentence (){
+            console.log('helloworld!')
+
+        }
+        sentence()
+        const sentenceArrow=()=> console.log("hello world!")
+        sentenceArrow()  
+        
+    </script>
+    
+</body>
+</html>

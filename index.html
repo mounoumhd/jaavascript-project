@@ -77,6 +77,76 @@
      } else {
      console.log("❌ Ajourné")
     }  
+
+
+    var nombre='5'
+    if (nombre == 5 ) {
+        console.log("comparaison non stricte ,la valeur est egal apres conversion")
+        
+    } else {
+        console.log ("comparaison non stricte,la valeur est differente ")
+    }
+    //conditions ternaire
+    nombre===5?console.log("comparaison non stricte ,la valeur et le type sont egaux" ):console.log ("comparaison non stricte,la valeur ou le type est different" )
+    if (nombre === 5 ) {
+        console.log("comparaison non stricte ,la valeur et le type sont egaux" )
+        
+    } else {
+        console.log ("comparaison non stricte,la valeur ou le type est different" )
+    }
+
+    //switch case:evaluer la variable selon sa valeur .
+
+    var couleur="rouge"
+    switch (couleur) {
+        case 'rouge':
+            console.log("arretez, le feu est rouge")
+            break;
+        case "orange" :
+          console.log("attention, le feu est orange")
+         break;
+        case "vert" :
+           console.log("allez-y, le feu est vert")
+         break;
+
+        default : console.log("couleur inconnue!")
+          break;
+          
+    }
+    //les fonctions 
+    function salutation(){
+        console.log("bonjour,je suis la meilleure developpeuse!")
+    }
+    salutation()
+    function somme(nombre1,nombre2){
+        return nombre1+nombre2 
+    }
+    console.log(somme(12,12))
+     
+    function carre (nombre1){
+        return nombre1*nombre1
+    }
+    console.log( carre(3))
+
+    function increment(nombre1){ 
+        return nombre1+1
+    }
+    console.log(increment(9))
+     
+    function partie(nombre1){
+        if (nombre1%2 === 0) {
+            console.log( '${nombre1} est paire ')
+            
+        } else {
+            console.log( '${nombre1} est impaire')
+            
+        }
+
+    }
+    console.log(partie(4))
+
+        
+    
     </script>
 </body>
 </html>
