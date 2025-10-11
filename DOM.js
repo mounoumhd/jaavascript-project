@@ -4,7 +4,7 @@ console.log(titre,"la recuperation de tout les eleements qui contiennent le nom 
 const demo =document.getElementById("demo")
 console.log(demo,"la recuperation de tout les elements dont le id est demo ")
 
-const tag=document.getElementsByTagName("h2")
+const tag=document.getElementsByTagName("h2") 
 console.log(tag,"la recuperation de tout les elements dont le tag est he ")
 
 document.getElementById("demo").style.color="red"
@@ -24,5 +24,6 @@ demo.onclick = salut
 
 const booklist=document.querySelectorAll("#listes-livres li .name")
 console.log(booklist,"my book list")
+
 const myselector=document.querySelector("#listes-livres li:nth-child(2) .name")
 console.log(myselector,"mon selecteur")

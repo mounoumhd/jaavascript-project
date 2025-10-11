@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>javascript arrays </h1>
+    <p>appeler la fonctions une seule fois pour chaque element</p>
+    <p od="demo"></p>
+    <script>
+        const numbers = [45,4,9,16,35]
+        function DoubleAndLog(num){
+            console.log(num*2,"forEach ")
+        }
+        numbers.forEach(DoubleAndLog)
+
+        const num=["1","2","3","4","5"]
+        function double(num){
+            return num*2
+        }
+        const DoubleNumber=num.map(double)
+        console.log(DoubleNumber)
+        
+        const numbers1=["1","2","3","4","5","6"]
+        const EvenNumber=numbers1.filter((num ) => num%2 === 0)
+        console.log(EvenNumber)
+
+        const numbers2 =["1","2","3","4","5"]
+        const somme = numbers2.reduce((accumulator,currentvalue)=> accumulator+currentvalue,1)
+        console.log(somme)
+
+        const numbers3=["2","4","6","10"]
+        const alleven = numbers3.every((num)=> num%2===0)
+        console.log(alleven)
+
+        const fruits=["kiwi","raisins","pomme","orange"]
+        const indexOffItems= fruits.indexOf("kiwi")
+        console.log(indexOffItems)
+
+        const result=fruits.find((fruit)=>fruit.length>20)
+        console.log(result)
+
+        const numbers4=["10","20","30","40","50"]
+        const index = numbers4.findIndex((num)=>num>51)
+        console.log(index)
+
+    </script>
+
+</body>
+</html>
